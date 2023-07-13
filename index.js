@@ -26,11 +26,13 @@ function smoothScroll(target, duration) {
   // Navbar links smooth scroll
   const navLinks = document.querySelectorAll('#nav-menu a');
   navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetSection = link.getAttribute('href');
-      smoothScroll(targetSection, 1000); // Set the duration (in milliseconds) as per your preference
-    });
+    if (!link.classList.contains('resume')) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetSection = link.getAttribute('href');
+        smoothScroll(targetSection, 1000); // Set the duration (in milliseconds) as per your preference
+      });
+    }
   });
 
   
