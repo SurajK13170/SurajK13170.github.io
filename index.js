@@ -62,3 +62,32 @@ function scrollProjects(direction) {
 
   projectContainer.style.transform = `translateX(-${scrollPosition}px)`;
 }
+
+
+
+
+// name animation
+const userDetailName = document.getElementById("user-detail-name");
+    const name = "Suraj Kumar";
+    const delay = 150; // Adjust the delay (in milliseconds) for typing speed
+    const pause = 2000; // Delay (in milliseconds) before restarting the animation
+  
+    function typeText() {
+      userDetailName.textContent = "";
+      let currentIndex = 0;
+  
+      function addCharacter() {
+        userDetailName.textContent += name[currentIndex];
+        currentIndex++;
+  
+        if (currentIndex < name.length) {
+          setTimeout(addCharacter, delay);
+        } else {
+          setTimeout(typeText, pause);
+        }
+      }
+  
+      addCharacter();
+    }
+  
+    window.addEventListener("load", typeText);
