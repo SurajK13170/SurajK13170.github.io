@@ -351,10 +351,7 @@ body {
     color: #0ef;
 }
 
-.Portfolio-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
-}
+
 
 
 
@@ -500,14 +497,14 @@ body {
   }
   
   .Portfolio-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   
   /* Styling for individual project items */
   .row {
-    width: calc(33.33% - 20px);
+    /* width: calc(33.33% - 20px); */
     margin-bottom: 40px;
     position: relative;
     padding: 10px;
@@ -1013,6 +1010,11 @@ body {
         width: 100%; /* Make the form fields and submit button full width */
         margin: 10px 0;
     }
+    .Portfolio-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
 }
 
 /* For screens with a maximum width of 620px */
@@ -1082,7 +1084,7 @@ body {
 }
 
 /* For screens with a maximum width of 400px (e.g., smartphones) */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .home-content h1 {
         font-size: 20px;
     }
@@ -1131,4 +1133,9 @@ body {
     .contact{
         grid-template-columns: repeat(1,1fr);
     }
+
+    .Portfolio-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
 }
