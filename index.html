@@ -4,357 +4,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Suraj Kumar | Portfolio</title>
-<<<<<<< HEAD
-    <!-- <link rel="shortcut icon"
-        href="https://cdn.discordapp.com/attachments/758572508911501315/1129308033604923442/ap-letter-logo-design_579179-1040-removebg-preview-removebg-preview.png"
-        type="jpeg/png"> -->
-=======
-   
->>>>>>> ae3b341427dc019e22434743a9fbb10238ee1b8c
-
-    <!-- first-Font -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- font-family: 'Dancing Script', cursive; -->
-
-
+    <title>Suraj's Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav id="nav-menu">
-        <ul>
-            <!-- <li class="logo"><img
-                    src="https://cdn.discordapp.com/attachments/758572508911501315/1129308033604923442/ap-letter-logo-design_579179-1040-removebg-preview-removebg-preview.png"
-                    alt=""> -->
-            </li>
-            <label class="switch" title="Dark-Mode" title="Dark-Mode">
-                <input type="checkbox" id="dark-mode-toggle">
-            </label>
-        </ul>
-        <ul>
-            <li><a href="#home" class="nav-link home">Home</a></li>
-            <li><a href="#about" class="nav-link about">About</a></li>
-            <li><a href="#skills" class="nav-link skills">Skills</a></li>
-            <li><a href="#pp" class="nav-link projects">Projects</a></li>
-            <li><a href="#contact" class="nav-link contact">Contact</a></li>
-            <li><a class="nav-link resume"
-                    href="https://drive.google.com/uc?export=download&id=16qqEFGg8S2MPyypPG1qT7mBeQGnvHQsw"
-                    target="_blank" id="resume-button-1">Resume</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <a href="#" class="logo">Suraj Kumar</a>
+        <!-- Button to toggle navigation menu on small screens -->
+        <button id="menu-button" class="menu-button">&#9776;</button>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#services" style="--i:3">Services</a>
+            <a href="#skills" style="--i:4">Skill</a>
+            <a href="#projects" style="--i:5">Project</a>
+            <a href="#github" style="--i:6">GitHub</a>
+
+            <a href="#contact" style="--i:7">Contact</a>
+            <button class="nav-button">Resume</button>
+        </nav>
+    </header>
 
 
     <!-- Home Section -->
-    <section id="home">
+
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, I am</h3>
+            <h1>Suraj Kumar</h1>
+            <h3>A <span class="typing-text"></span></h3>
+            <p> Full Stack Developer and Node.js Developer and <br>My expertise is in creating RESTful API, Frontend
+                design, and more....
+            </p>
+            <div class="home-sci">
+                <a href="https://github.com/SurajK13170" style="--i:7"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/suraj-kumar-39a072257/" style="--i:8"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=918700643151" style="--i:9"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <a href="https://drive.google.com/uc?export=download&id=16qqEFGg8S2MPyypPG1qT7mBeQGnvHQsw"
+                class="btn-box">More About Me</a>
+        </div>
+        <span class="home-imgHover"></span>
+    </section>
+
+    <!-- About section  -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="profile.png" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(0, 65, 87);"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0, 112, 105);"></stop>
+                    </linearGradient>
+                </defs>
+                <path id="blob" fill="url(#gradient)">
+                    <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                        values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+                    </animate>
+                </path>
+            </svg>
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Full Stack Developer!</h4>
+            <p>🚀 Dynamic and detail-oriented Node.js Developer with a passion for crafting user-friendly websites.
+                Proficient in building diverse full stack projects, showcasing a strong command of JavaScript, Node.js,
+                Express, and MongoDB.
+                💡 Possesses a keen eye for creating intuitive and engaging user interfaces, coupled with a solid
+                understanding of backend development principles.
+                🤝 A collaborative team player with exceptional problem-solving skills, dedicated to delivering
+                efficient and scalable solutions.</p>
+            <a href="https://drive.google.com/uc?export=download&id=16qqEFGg8S2MPyypPG1qT7mBeQGnvHQsw"
+                class="btn-box">More About Me</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i><img src="./icons/icons8-e-commerce-100.png" alt=""></i>
+                        <h2>E-commerce Website</h2>
+                        <p>Create a fully functional e-commerce website with features like product listings, shopping
+                            cart, user authentication, and payment processing.</p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                    <div>
+                        <i><img src="./icons/icons8-wechat-96.png" alt=""></i>
+
+                        <h2>Real-Time Chat Application</h2>
+                        <p>Design a chat application that supports one-on-one and group messaging, online/offline
+                            status, and multimedia sharing.</p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                    <div>
+                        <i><img src="./icons/icons8-api-96.png" alt=""></i>
+                        <h2>RESTful API with Documentation</h2>
+                        <p>Build a RESTful API for a specific domain or service, and provide comprehensive documentation
+                            on how to use it.</p>
+                        <a href="#" class="read">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+
         <div class="container">
-            <div class="home-content">
-                <div class="home-text">
-                    <div>
-                        <p style="font-size: 26px;line-height: 1px;font-weight: 600;">Hi, I'm</p>
-                        <p id="user-detail-name"></p>
-                        <p id="user-detail-intro"></p>
-                        <!-- <ul id="socials">
-                            <li><a href="https://www.linkedin.com/in/suraj-kumar-39a072257/"><i class="fa-brands fa-linkedin" style="color: #0a23e2;"></i></a></li>
-                            <li><a href="https://github.com/SurajK13170"><i class="fa-brands fa-github" style="color: #020005;"></i></a></li>
-                        </ul> -->
-                    </div>
-                    <div id="mypic">
-                        <img src="images/suraj.jpg" alt="" class="home-img">
-                    </div>
+            <div class="section-heading">
+                <!-- <h2 class="section-title">Technical Skills</h2> -->
+                <h1 class="sub-title">My <span>Skills</span></h1>
+
+            </div>
+            <div class="skills-card-container">
+                <div class="skills-card" style="--animation-order: 1">
+                    <img src="./icons/icons8-html-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">HTML</h3>
                 </div>
+                <div class="skills-card" style="--animation-order: 2">
+                    <img src="./icons/icons8-css-100.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">CSS</h3>
+                </div>
+                <div class="skills-card" style="--animation-order: 3">
+                    <img src="./icons/icons8-javascript-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">Java Script</h3>
+                </div>
+                <div class="skills-card" style="--animation-order: 4">
+                    <img src="./icons/icons8-react-80.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">React</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 5">
+                    <img src="./icons/icons8-node-js-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">Node.js</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 6">
+                    <img src="./icons/icons8-nextjs-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">Next.js</h3>
+                </div>
+                <div class="skills-card" style="--animation-order: 7">
+                    <img src="./icons/icons8-express-js-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">Express</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 8">
+                    <img src="./icons/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png"
+                        alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">MongoDB</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 9">
+                    <img src="./icons/icons8-mysql-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">MY SQL</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 10">
+                    <img src="./icons/icons8-amazon-aws-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">AWS</h3>
+                </div>
+
+                <div class="skills-card" style="--animation-order: 11">
+                    <img src="./icons/icons8-github-96.png" alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">GitHub</h3>
+                </div>
+                <div class="skills-card" style="--animation-order: 12">
+                    <img src="./icons/icons8-postman-is-the-only-complete-api-development-environment-96.png"
+                        alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">PostMan</h3>
+                </div>
+                <div class="skills-card" style="--animation-order: 13">
+                    <img src="./icons/icons8-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites.-96.png"
+                        alt="Skill Icon" class="skills-card-img">
+                    <h3 class="skills-card-name">Netlify</h3>
+                </div>
+
+
+
             </div>
         </div>
     </section>
 
 
-    <!-- About Section -->
-
-    <div id="about-title">
-        <h2 class="right-title">About</h2>
-    </div>
-
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="about-content">
-                <div class="left-div">
-                    <p class="about-description">
-                        🚀 Dynamic and detail-oriented Node.js Developer with a passion for crafting user-friendly
-                        websites. Proficient in building diverse full stack projects, showcasing a strong command of
-                        JavaScript, Node.js, Express, and MongoDB.
-                        <br>💡 Possesses a keen eye for creating intuitive and engaging user interfaces, coupled with a
-                        solid understanding of backend development principles.
-                        <br>🤝 A collaborative team player with exceptional problem-solving skills, dedicated to
-                        delivering efficient and scalable solutions.
-                    </p>
-                    <div class="resume-buttons">
-                        <a class="resume-button" id="resume-button-2"
-                            href="https://drive.google.com/uc?export=download&id=16qqEFGg8S2MPyypPG1qT7mBeQGnvHQsw">Know
-                            More
-                            About Me &nbsp <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="right-div">
-                    <img src="https://www.nascenture.com/wp-content/uploads/2021/10/node-vector.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- SkillSection -->
-    <div>
-        <div id="Sills-title">
-            <h2 class="left-title">Skills</h2>
-        </div>
-
-        <section id="skills">
-            <div class="box22">
-                <div class="skills-card" style="--i:1;">
-                    <div>
-                        <img class="skills-card-img" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
-                            alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        Node.js
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:2;">
-                    <div>
-                        <img class="skills-card-img"
-                            src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        EXPRESS
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:3;">
-                    <div>
-                        <img class="skills-card-img" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"
-                            alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        MongoDB
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:3;">
-                    <div>
-                        <img class="skills-card-img" src="./Skills_Logo/mySql.png" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        SQL
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:4;">
-                    <div>
-                        <img class="skills-card-img"
-                            src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        POSTMAN
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:5;">
-                    <div>
-                        <img class="skills-card-img"
-                            src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        AWS
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:6;">
-                    <div>
-                        <img class="skills-card-img" src="Skills_Logo/Git_logo.png" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        Git
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:7;">
-                    <div>
-                        <img class="skills-card-img" src="Skills_Logo/html_logo.png" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        HTML
-                    </div>
-
-                </div>
-
-                <div class="skills-card" style="--i:8;">
-                    <div>
-                        <img class="skills-card-img" src="Skills_Logo/css_logo.webp" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        CSS
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:9;">
-                    <div>
-                        <img class="skills-card-img" src="Skills_Logo/js_logo2.jpg" alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        JavaScript
-                    </div>
-                </div>
-
-                <div class="skills-card" style="--i:10;">
-                    <div>
-                        <img class="skills-card-img" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-                            alt="">
-                    </div>
-                    <div class="skills-card-name">
-                        React
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-
-    <!-- Projects Section -->
-
-    <section id="pp">
-        <div id="Project-tittle">
-            <h2 class="right-title">Projects</h2>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <div class="project-carousel">
-                <div class="project-card-container">
-                    <div class="project-card">
-                        <!-- Project 1 content -->
-                        <img src="./images/Medi-Good.png" alt="">
-                        <h2 class="project-title">MediGood</h2>
-                        <p class="project-description">An online platform specializing in vintage and timeless fashion.</p>
-                        <div class="pro_fea">
-                        <ul>
-                            <label class="project-feature">Features:</label>
-                            <li>User Authentication.</li>
-                            <li>Searching, Sorting</li>
-                            <li>Filtering: Browse and find desired clothing items easily.</li>
-                            <li>E-commerce Functionality</li>
-                        </ul>
-                    </div>
-                        <p class="project-tech-stack">HTML, CSS, and JavaScript</p>
-                        <a href="https://github.com/SurajK13170/verdant-straw-7365" class="project-github-link"><img src="Skills_Logo/git.png" alt=""></a>
-                        <a href="https://jazzy-dusk-b87644.netlify.app" class="project-deployed-link"><img src="Skills_Logo/Netlify.png" alt=""></a>
-                    </div>
-                    
-                    <div class="project-card">
-                        <!-- Project 1 content -->
-                        <img src="./images/Classic-Clothes.png" alt="">
-                        <h2 class="project-title">Classic-Clothes</h2>
-                        <p class="project-description">An online platform specializing in vintage and timeless fashion.</p>
-                        <div class="pro_fea">
-                        <ul>
-                            <label class="project-feature">Features:</label>
-                            <li>User Authentication.</li>
-                            <li>Searching, Sorting</li>
-                            <li>Filtering: Browse and find desired clothing items easily.</li>
-                            <li>E-commerce Functionality</li>
-                        </ul>
-                    </div>
-                        <p class="project-tech-stack">HTML, CSS, and JavaScript,Node.js, Express, MongoDB</p>
-                        <a href="https://github.com/SurajK13170/Unit_4-CW" class="project-github-link"><img src="Skills_Logo/git.png" alt=""></a>
-                        <a href="https://rococo-panda-4934b7.netlify.app/" class="project-deployed-link"><img src="Skills_Logo/Netlify.png" alt=""></a>
+            <div class="Portfolio-content">
+                <!-- Project 1 -->
+                <div class="row" data-index="0">
+                    <img class="project-image" src="./icons/Medi-Good.png" alt="">
+                    <div class="layer">
+                        <h5>Medi Good</h5>
+                        <p>
+                            Medi Good is an e-commerce platform for purchasing medicines, inspired by the TATA 1mg
+                            website.
+                        </p>
+                        <p style="font-size: 15px;"> <span style="font-weight: bolder;">Tech Stack:-</span> HTML, CSS
+                            and JavaScript </p>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://github.com/SurajK13170/verdant-straw-7365" class="project-github-link"
+                                title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://peaceful-biscuit-86f1b7.netlify.app/" class="project-deployed-link"
+                                title="Deployed-Link"><i class="fa-solid fa-eye"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- Project 2 -->
+                <div class="row" data-index="1">
+                    <img class="project-image" src="./icons/Classic-Clothes.png" alt="">
+                    <div class="layer">
+                        <h5>Classic-Clothes</h5>
+                        <p>
+                            We're creating an online platform inspired by Kvoss, focusing on vintage and timeless
+                            fashion.
+                        </p>
+                        <p style="font-size: 15px;"> <span style="font-weight: bolder;">Tech Stack:-</span> HTML, CSS,
+                            JavaScript, Node.js, MongoDB
+                            and Express.</p>
+
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://github.com/SurajK13170/Unit_4-CW" class="project-github-link"
+                                title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://64fc5ebca1bc444f38aebfdb--splendid-tarsier-118e00.netlify.app/"
+                                class="project-deployed-link" title="Deployed-Link"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="row" data-index="1">
+                    <img class="project-image" src="./icons/PetCare.png" alt="">
+                    <div class="layer">
+                        <h5>PET CARE</h5>
+                        <p>
+                            Book pet care appointments effortlessly. Your pets deserve the best. Your pet's well-being,
+                            our priority.</p>
+                        <p style="font-size: 15px;"> <span style="font-weight: bolder;">Tech Stack:-</span> React,
+                            Node.js, Express, Node Mailer</p>
+
+
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://github.com/mrunalibind/puny-potato-4945" class="project-github-link"
+                                title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://64fdf4e7860af03b44867a3f--exquisite-bombolone-997410.netlify.app/"
+                                class="project-deployed-link" title="Deployed-Link"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </section>
 
 
+    <section id="github" class="github">
+        <div class="github-container">
+            <h2 class="left-title">GitHub Stats</h2>
+            <div class="github-cards">
+                <div class="github-card">
+                    <a class="react-activity-calendar" href="https://git.io/streak-stats">
+                        <img id="github-streak-stats"
+                            src="https://github-readme-streak-stats.herokuapp.com/?user=SurajK13170&theme=highcontrast&border_radius=5"
+                            alt="GitHub Streak Stats" />
+                    </a>
+                </div>
 
-    <!-- gitHub streak stats -->
-    <div>
-        <div id="git-title">
-            <h2 class="left-title">Github Stats</h2>
+                <div class="github-card">
+                    <a class="react-activity-calendar" href="https://github.com/SurajK13170/github-readme-stats">
+                        <img id="github-stats-card"
+                            src="https://github-readme-stats.vercel.app/api?username=SurajK13170"
+                            alt="GitHub Stats Card" />
+                    </a>
+                </div>
+
+                <div class="github-card">
+                    <a class="react-activity-calendar" href="https://github.com/SurajK13170/github-readme-stats">
+                        <img id="github-top-langs"
+                            src="https://github-readme-stats.vercel.app/api/top-langs/?username=SurajK13170"
+                            alt="GitHub Top Langs" />
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="github">
-            <div>
-                <a class="react-activity-calendar" href="https://git.io/streak-stats">
-                    <img id="github-streak-stats"
-                        src="https://github-readme-streak-stats.herokuapp.com/?user=SurajK13170&theme=highcontrast&border_radius=5"
-                        alt="GitHub Streak Stats" />
-                </a>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let's work Together</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa distinctio deserunt illo commodi, minus,
+                sint adipisci repellat, maxime sed deleniti voluptatum ea necessitatibus et voluptatem impedit ducimus
+                quidem harum facere.</p>
+            <div class="contact-list">
+                <li> <i class="fa-solid fa-paper-plane" style="color: #4b73b9;"></i> bgrills57@gmail.com</li>
+                <li> <i class="fa-solid fa-phone" style="color: #2c5aaa;"></i> 8700643151</li>
+
+            </div>
+            <div class="contact-icons">
+                <a href="https://github.com/SurajK13170"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/suraj-kumar-39a072257/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=918700643151"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:bgrills57@gmail.com"><i class="fa-brands fa-google"></i></a>
             </div>
 
-            <div>
-                <a class="react-activity-calendar" href="https://github.com/SurajK13170/github-readme-stats">
-                    <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=SurajK13170"
-                        alt="GitHub Stats Card" />
-                </a>
-            </div>
-
-            <div>
-                <a class="react-activity-calendar" href="https://github.com/SurajK13170/github-readme-stats">
-                    <img id="github-top-langs"
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=SurajK13170"
-                        alt="GitHub Top Langs" />
-                </a>
-            </div>
         </div>
+
+        <div class="contact-form">
+            <form action="">
+                <input type="text" name="" id="name" placeholder="Enter Your Name" required>
+                <input type="email" name="" id="" placeholder="Enter Your Email" required>
+                <input type="email" name="" id="" placeholder="Enter Your Subject" required>
+                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="submit" value="submit" class="send">
+
+            </form>
+        </div>
+    </section>
+    <div class="last-text">
+        <p>Devloper with love </p>
     </div>
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up-from-bracket fa-bounce"></i></a>
 
 
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h2>Get in touch</h2>
-                <p>"Embrace the power of technology, where innovation becomes reality and possibilities are limited only
-                    by imagination."</p>
-            </div>
-            <ul class="contact-list">
-                <li><a href="mailto:abhipathak3537.com" id="contact-email"><i class="fa-solid fa-envelope"
-                            style="color: #050505;"></i>bgrills57@gmail.com</a></li>
 
-                <li><a href="#" id="contact-phone"><i class="fa-solid fa-phone" style="color: #000000;"></i> +91
-                        8700643151</a></li>
-            </ul>
-            <ul id="foot-socials">
-                <li><a href=""><i class="fa-brands fa-whatsapp" style="color: #ff7300;"></i></a>
-                </li>
-                <li><a href=""><i class="fa-brands fa-instagram" style="color: #ff7300;"></i></a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/suraj-kumar-39a072257/"><i class="fa-brands fa-linkedin"
-                            style="color: #ff7300;"></i></a>
-                </li>
-                <li><a href="https://github.com/SurajK13170"><i class="fa-brands fa-github"
-                            style="color: #ff7300;"></i></a>
-                </li>
-            </ul>
-            <p style="margin-left: 50px;">Desingned by <span style="color: #ff7300;">Suraj Kumar</span></p>
-        </div>
-    </section>
-
-
-    <!-- JavaScript -->
-    <script src="https://kit.fontawesome.com/30a5a51570.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/56f4c26919.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
