@@ -1,4 +1,3 @@
-// Function to add a class when an element is in the viewport
 function addClassOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach((element) => {
@@ -11,21 +10,47 @@ function addClassOnScroll() {
     });
 }
 
-// Add a scroll event listener to trigger animations when elements are in the viewport
 window.addEventListener('scroll', addClassOnScroll);
 
-// Check for animations on page load
 window.addEventListener('DOMContentLoaded', () => {
     addClassOnScroll();
 });
 
+// JavaScript code for toggling the navigation menu
 
+const homeEl = document.getElementById('home');
 const menuButton = document.getElementById('menu-button');
 const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar a');
+
+// Function to close the navbar
+function closeNavbar() {
+    navbar.classList.remove('active');
+    homeEl.classList.remove('expand');
+}
 
 menuButton.addEventListener('click', () => {
     navbar.classList.toggle('active');
+    homeEl.classList.toggle('expand');
 });
+
+// Add click event listeners to each navigation link
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        closeNavbar(); // Close the navbar when a link is clicked
+    });
+});
+
+
+
+// window.addEventListener('resize', () => {
+//     if (window.innerWidth > 851) {
+//         navbar.style.display = 'block';
+//         }
+//      else {
+//         navbar.style.display = 'none';
+//         };
+// });
 
 
 
@@ -34,7 +59,7 @@ const textArray = [
     "Node.js Developer"
 ];
 
-const typingSpeed = 50; // Adjust typing speed in milliseconds
+const typingSpeed = 50; 
 const typingTextElement = document.querySelector(".typing-text");
 
 let textIndex = 0;
@@ -49,14 +74,12 @@ function typeText() {
             charIndex++;
             setTimeout(typeText, typingSpeed);
         } else {
-            // Start deleting the text after a brief pause
             setTimeout(deleteText, 1000);
         }
     } else {
-        // Reset textIndex and charIndex to loop through the textArray again
         textIndex = 0;
         charIndex = 0;
-        setTimeout(typeText, 1000); // Start typing animation again after a brief pause
+        setTimeout(typeText, 1000);
     }
 }
 
@@ -68,13 +91,12 @@ function deleteText() {
         charIndex--;
         setTimeout(deleteText, typingSpeed);
     } else {
-        // Move to the next text after a brief pause
         textIndex++;
         setTimeout(typeText, 1000);
     }
 }
 
-typeText(); // Start typing animation when the page loads
+typeText();
 
 let resumeBtn = document.querySelector('.nav-button')
 console.log(resumeBtn)

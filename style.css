@@ -17,6 +17,7 @@ body {
 }
 
 /* Header Styles */
+/* Base styles for the header */
 .header {
     position: fixed;
     top: 0;
@@ -30,6 +31,7 @@ body {
     z-index: 100;
 }
 
+/* Logo styles */
 .logo {
     font-size: 25px;
     color: #fff;
@@ -40,6 +42,7 @@ body {
     animation: slideRight 1s ease forwards 0.5s;
 }
 
+/* Menu button styles */
 .menu-button {
     display: none;
     font-size: 40px;
@@ -54,66 +57,81 @@ body {
     color: #0ef;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-}
-
-/* Add this CSS for smooth underline effect on hover */
+/* Navigation link styles */
 .navbar a {
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    position: relative; /* Add position relative to anchor tags */
+    position: relative;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
 }
-
-.navbar a:hover {
-    color: #0ef; /* Change the text color on hover */
+.navbar{
+    display: flex;
+    gap: 20px;
 }
 
-.navbar a::before { /* Create an underline element */
+/* Styles for the active navigation link */
+.navbar a.active {
+    color: #0ef;
+}
+
+/* Underline effect on hover for navigation links */
+.navbar a::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px; /* Set the height of the underline */
+    height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0ef; /* Set the color of the underline */
-    transform: scaleX(0); /* Initially scale the underline to zero width */
+    background-color: #0ef;
+    transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.3s ease; /* Add a transition for smooth scaling */
+    transition: transform 0.3s ease;
 }
 
 .navbar a:hover::before {
-    transform: scaleX(1); /* Scale the underline to full width on hover */
+    transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-/* Styles for the button in the navbar */
+/* Button styles in the navbar */
 .nav-button {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef; /* Customize the background color */
+    background: #0ef;
     border-radius: 40px;
     font-size: 16px;
-    color: #081b29; /* Customize the text color */
+    color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 20px; /* Adjust the spacing from the navigation links */
+    margin-left: 20px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-button:hover {
-    background: cyan; /* Customize the hover background color */
-    box-shadow: 0 0 20px #0ef; /* Add hover box shadow */
-    cursor: p;
+    background: cyan;
+    box-shadow: 0 0 20px #0ef;
+    cursor: pointer;
 }
+
+
+.navbar.active {
+    opacity: 1;
+}
+
+.navbar a {
+    margin: 10px 0;
+}
+
+.expand{
+    margin-top: 50%;
+}
+
 
 
 
@@ -876,6 +894,7 @@ body {
     #menu-button{
         display: block;
     }
+
 
     .home-content {
         text-align: center;
