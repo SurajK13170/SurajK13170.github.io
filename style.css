@@ -959,9 +959,7 @@ body {
 
 /* For screens with a maximum width of 710px */
 @media screen and (max-width: 710px) {
-    .navbar {
-        top: 60px; /* Adjust the top position as needed */
-    }
+  
     .home-content h1 {
         font-size: 24px;
     }
@@ -1027,9 +1025,7 @@ body {
 
 /* For screens with a maximum width of 620px */
 @media screen and (max-width: 620px) {
-    .navbar {
-        top: 60px; /* Adjust the top position as needed */
-    }
+   
     .home-content h1 {
         font-size: 24px;
     }
