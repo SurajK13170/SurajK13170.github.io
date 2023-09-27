@@ -29,6 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 /* Logo styles */
@@ -153,7 +154,7 @@ body {
 }
 
 .home-content h3 {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards 0.7s;
@@ -169,7 +170,7 @@ body {
 }
 
 .home-content h1 {
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
     margin: -3px 0;
     animation: slideLeft 1s ease forwards 1s;
@@ -870,8 +871,13 @@ body {
 
 /* For medium screens (e.g., tablets) */
 @media screen and (max-width: 850px) {
-    .navbar {
+    .navbar:not(.active) {
         display: none;
+    }
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+        flex: 1;
     }
 
     .navbar.active {
@@ -889,15 +895,14 @@ body {
         text-align: center;
     }
 
-    .home-content h1 {
-        font-size: 36px;
-    }
+    
 
     .home-content p {
         font-size: 16px;
     }
 
     .about {
+        display: flex;
         flex-direction: column;
     }
 
@@ -960,9 +965,7 @@ body {
 /* For screens with a maximum width of 710px */
 @media screen and (max-width: 710px) {
   
-    .home-content h1 {
-        font-size: 24px;
-    }
+   
 
     .home-content p {
         font-size: 14px;
@@ -1026,9 +1029,7 @@ body {
 /* For screens with a maximum width of 620px */
 @media screen and (max-width: 620px) {
    
-    .home-content h1 {
-        font-size: 24px;
-    }
+    
 
     .home-content p {
         font-size: 14px;
@@ -1090,7 +1091,7 @@ body {
 /* For screens with a maximum width of 400px (e.g., smartphones) */
 @media screen and (max-width: 500px) {
     .home-content h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .home-content p {
