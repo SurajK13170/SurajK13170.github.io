@@ -239,12 +239,13 @@ body {
     padding-bottom: 20%;
     max-width: 630px;
     height: auto;
-    width: 100%;
+    width: 46%;
     border-radius: 8px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
+    /* object-fit: cover; */
 }
 
 .about-text h2 {
@@ -894,9 +895,7 @@ body {
     .home-content {
         text-align: center;
     }
-
     
-
     .home-content p {
         font-size: 16px;
     }
@@ -908,6 +907,9 @@ body {
 
     .about-img {
         text-align: center;
+    }
+    .about-img img{
+        width: 50%;
     }
 
     .about-text {
