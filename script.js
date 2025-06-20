@@ -101,5 +101,5 @@ typeText();
 let resumeBtn = document.querySelector('.nav-button')
 console.log(resumeBtn)
 resumeBtn.addEventListener('click', function() {
-    window.location.href = "https://drive.google.com/uc?export=download&id=16qqEFGg8S2MPyypPG1qT7mBeQGnvHQsw";
+    window.location.href = "https://drive.google.com/uc?export=download&id=1t--akKZ1Dih6vi4BR8TNzBWxJKtm_aeK";
 });
